@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Test -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>The Annoying Forecast</title>
+</head>
+<body>
+    <div class="button">
+        <div class="content">
+            <i class="bx bx-cloud-download"></i>
+            <span class="button-text">Scan Weather</span>
+        </div>
+    </div>
+
+    <script>
+
+        let button = document.querySelector(".button")
+
+        button.addEventListener("click" , ()=>{
+            button.classList.add("active");
+
+            setTimeout(()=>{
+            button.classList.remove("active"); //remove active class after 6s 
+            document.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle")
+            document.querySelector(".button-text").innerText = "lmao idk go outside lol";
+
+            },6000) //1s = 1000ms
+
+        })
+
+    </script>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+    <p>Scan the weather in your current location and receive a weather report with a single click of a button! (very accurate and reliable)</p>
+</body>
+</html>
